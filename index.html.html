@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akirha Jhane Y. Eugenio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #cc85d7;
+            font-size: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+            color: #5e3a8d;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            background-image: url('https://www.transparenttextures.com/patterns/glitter.png'); /* Glitter effect */
+        }
+        .icon-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .line {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .letter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(217, 153, 244, 0.8);
+            font-family: 'Cursive';
+        }
+        .purple-light {
+            background: radial-gradient(circle, #e0b0ff, #c084fc);
+            color: white;
+        }
+        .purple-dark {
+            background: radial-gradient(circle, #c084fc, #9b59b6);
+            color: white;
+        }
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px white;
+            animation: twinkle 1.5s infinite alternate;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-text">
+        <div class="line">
+            <div class="letter purple-light">A</div>
+            <div class="letter purple-dark">K</div>
+            <div class="letter purple-light">I</div>
+            <div class="letter purple-dark">R</div>
+            <div class="letter purple-light">H</div>
+            <div class="letter purple-dark">A</div>
+        </div>
+        <div class="line">
+            <div class="letter purple-light">J</div>
+            <div class="letter purple-dark">H</div>
+            <div class="letter purple-light">A</div>
+            <div class="letter purple-dark">N</div>
+            <div class="letter purple-light">E</div>
+        </div>
+        <div class="line">
+            <div class="letter purple-dark">Y</div>
+        </div>
+        <div class="line">
+            <div class="letter purple-dark">E</div>
+            <div class="letter purple-light">U</div>
+            <div class="letter purple-dark">G</div>
+            <div class="letter purple-light">E</div>
+            <div class="letter purple-dark">N</div>
+            <div class="letter purple-light">I</div>
+            <div class="letter purple-dark">O</div>
+        </div>
+    </div>
+    <script>
+        // Generate random stars in the background
+        for (let i = 0; i < 50; i++) {
+            let star = document.createElement("div");
+            star.classList.add("star");
+            star.style.top = Math.random() * 100 + "vh";
+            star.style.left = Math.random() * 100 + "vw";
+            star.style.animationDuration = (Math.random() * 1.5 + 0.5) + "s";
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
